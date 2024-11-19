@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NaitBeats</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css?v=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
+        body {
+            background: linear-gradient(to right, #f7f8fa, #ffffff);
+            color: #333;
+        }
         .social-icons {
             display: flex;
             justify-content: center;
@@ -24,17 +28,42 @@
             height: 36px;
             margin-right: 8px;
         }
+        .icon-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .icon-buttons a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .icon-buttons a img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+        }
+        .icon-buttons a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
     <nav class="container-fluid">
         <ul>
             <li><strong>NaitBeats</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#links">Links</a></li>
-            <li><a href="#contact" role="button">Contact</a></li>
         </ul>
     </nav>
 
@@ -46,41 +75,34 @@
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png?v=1" alt="Discord">reisalinstout
         </a>
         <a href="https://x.com/naitbeats" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png?v=1" alt="X">Twitter/X
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png?v=1" alt="X">X
         </a>
     </div>
-    
-    <main class="container">
-        <div class="grid">
-            <section>
-                <hgroup>
-                    <h2>NaitBeats</h2>
-                    <h3>Hakuna Matata</h3>
-                </hgroup>
-                <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology. When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
-                <h3>Professional Yet Approachable</h3>
-                <p>I believe in staying professional while maintaining a positive and relaxed outlook. My work reflects this balance, aiming for excellence with a touch of creativity.</p>
-                <h3>Let's Connect</h3>
-                <p>Feel free to reach out to me on my social platforms or via the contact section below.</p>
-            </section>
-        </div>
-    </main>
 
-    <section aria-label="Subscribe example">
-        <div class="container">
-            <article>
-                <hgroup>
-                    <h2>Stay in Touch</h2>
-                    <h3>Subscribe for updates</h3>
-                </hgroup>
-                <form class="grid">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your name" aria-label="Your name" required />
-                    <input type="email" id="email" name="email" placeholder="Your email" aria-label="Your email" required />
-                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                </form>
-            </article>
-        </div>
-    </section>
+    <div class="icon-buttons">
+        <a href="contact.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail">
+            Contact
+        </a>
+        <a href="minigame.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/861/861060.png" alt="Controller">
+            Minigame
+        </a>
+    </div>
+
+    <main class="container">
+        <section>
+            <hgroup>
+                <h2>NaitBeats</h2>
+                <h3>Hakuna Matata</h3>
+            </hgroup>
+            <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology. When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
+            <h3>Professional Yet Approachable</h3>
+            <p>I believe in staying professional while maintaining a positive and relaxed outlook. My work reflects this balance, aiming for excellence with a touch of creativity.</p>
+            <h3>Contact Information</h3>
+            <p>The contact section is above with a direct link to reach out.</p>
+        </section>
+    </main>
 
     <footer class="container">
         <small>© 2024 NaitBeats</small>
