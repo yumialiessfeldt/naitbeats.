@@ -1,0 +1,1 @@
+User wants a professional introduction website with links to Instagram, Discord, and X, and a centered header for social media icons.
