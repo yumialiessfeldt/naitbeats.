@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NaitBeats</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background: #121212;
             color: #e0e0e0;
             font-family: 'Arial', sans-serif;
         }
-nav {
-    background: #1f1f1f;
-    padding: 15px;
-    border-bottom: 1px solid #333;
-}
-
-nav strong {
-    color: #e0e0e0;
-}
+        nav {
+            background: #1f1f1f;
+            padding: 15px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Added */
+        }
+        nav strong {
+            color: #e0e0e0;
+        }
         .social-icons {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 15px;
-            margin: 20px 0;
+            margin: 0; /* Removed margin */
         }
         .social-icons a {
             display: inline-flex;
@@ -79,19 +81,18 @@ nav strong {
         <img src="https://i.imgur.com/uVUnh41.png" alt="NaitBeats Logo" class="logo">
     </header>
     <nav>
-         <div class="social-icons">
-        <a href="https://instagram.com/naitbeatss" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
-        </a>
-        <a href="https://discord.com/users/reisalinstout" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">reisalinstout
-        </a>
-        <a href="https://x.com/naitbeats" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X">X
-        </a>
-    </div>
+        <div class="social-icons">
+            <a href="https://instagram.com/naitbeatss" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
+            </a>
+            <a href="https://discord.com/users/reisalinstout" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">reisalinstout
+            </a>
+            <a href="https://x.com/naitbeats" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X">X
+            </a>
+        </div>
     </nav>
-
     <main class="container">
         <section>
             <hgroup>
@@ -104,7 +105,6 @@ nav strong {
             <h3>Explore</h3>
             <p>Use the icons below to learn more about me, connect via email, or play a fun Snake game!</p>
         </section>
-
         <div class="icon-buttons">
             <a href="about.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/876/876069.png" alt="About">
@@ -120,7 +120,6 @@ nav strong {
             </a>
         </div>
     </main>
-
     <footer>
         <small>© 2024 NaitBeats</small>
     </footer>
