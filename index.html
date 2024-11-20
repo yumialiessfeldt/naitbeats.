@@ -2,97 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NaitBeats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin System</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbY2dAuXVKycD70lPNB+I+zQJfR2+USsCIhP2tp+mbb8gN1F/P" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <style>
-        body {
-            background: #121212;
-            color: #e0e0e0;
-            font-family: 'Arial', sans-serif;
-        }
-        nav {
-            background: #1f1f1f;
-            padding: 15px;
-            border-bottom: 1px solid #333;
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Added */
-        }
-        nav strong {
-            color: #e0e0e0;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin: 0; /* Removed margin */
-        }
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            font-size: 1.2rem;
-            color: #e0e0e0;
-        }
-        .social-icons a img {
-            width: 36px;
-            height: 36px;
-            margin-right: 8px;
-        }
-        .icon-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        /* ... (existing styles from previous response) ... */
+        /* Login Form Styles */
+        #loginForm {
+            display: none; /* Initially hidden */
             margin-top: 20px;
-            flex-wrap: wrap;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
         }
-        .icon-buttons a {
+        #loginForm h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #loginForm label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        #loginForm input[type="text"],
+        #loginForm input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        #loginForm button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #loginForm button:hover {
+            background-color: #0056b3;
+        }
+        #loginForm .error {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        /* Admin Dashboard Styles */
+        #adminDashboard {
+            display: none; /* Initially hidden */
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        #adminDashboard h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        #adminDashboard .admin-tools {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        #adminDashboard .admin-tools a {
+            display: block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
             text-decoration: none;
-            background: #1f1f1f;
-            border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            justify-content: center;
-            transition: transform 0.2s ease-in-out;
+            transition: background-color 0.3s ease;
         }
-        .icon-buttons a img {
-            width: 28px;
-            height: 28px;
+        #adminDashboard .admin-tools a:hover {
+            background-color: #0056b3;
         }
-        .icon-buttons a:hover {
-            transform: scale(1.1);
+        /* Icon Styles */
+        .login-icon i {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #007bff;
         }
-        footer {
-            background: #1f1f1f;
-            text-align: center;
-            padding: 15px;
-            border-top: 1px solid #333;
+        .admin-icon i {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://i.imgur.com/uVUnh41.png" alt="NaitBeats Logo" class="logo">
-    </header>
     <nav>
-        <div class="social-icons">
-            <a href="https://instagram.com/naitbeatss" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
-            </a>
-            <a href="https://discord.com/users/reisalinstout" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">reisalinstout
-            </a>
-            <a href="https://x.com/naitbeats" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X">X
-            </a>
-        </div>
+        <ul>
+            <li><strong>NaitBeats</strong></li>
+        </ul>
     </nav>
+    <div class="social-icons">
+        <a href="https://instagram.com/naitbeatss" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
+        </a>
+        <a href="https://discord.com/users/reisalinstout" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">reisalinstout
+        </a>
+        <a href="https://x.com/naitbeats" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X">X
+        </a>
+    </div>
     <main class="container">
         <section>
             <hgroup>
@@ -105,6 +130,14 @@
             <h3>Explore</h3>
             <p>Use the icons below to learn more about me, connect via email, or play a fun Snake game!</p>
         </section>
+        <div class="icon-container">
+            <a href="#" class="icon login-icon">
+                <i class="fas fa-lock"></i> <span>Login</span>
+            </a>
+            <a href="#" class="icon admin-icon" style="display: none;">
+                <i class="fas fa-cogs"></i> <span>Admin Tools</span>
+            </a>
+        </div>
         <div class="icon-buttons">
             <a href="about.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/876/876069.png" alt="About">
@@ -123,6 +156,27 @@
     <footer>
         <small>© 2024 NaitBeats</small>
     </footer>
-    <script src="script.js"></script> 
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <div id="error-message" class="error"></div>
+        </form>
+    </div>
+    <div id="adminDashboard">
+        <h2>Admin Dashboard</h2>
+        <div class="admin-tools">
+            <a href="#">Manage Users</a>
+            <a href="#">View Reports</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+    <script>
+        // ... (JavaScript code for authentication and dynamic display) ...
+    </script>
 </body>
 </html>
