@@ -4,10 +4,10 @@ html {
 }
 
 .logo {
-    width: 200px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures the image takes up the full width of its container */
-    margin: 0 auto; /* Centers the image horizontally */
+    width: 200px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;  /* Add a 50px margin top */
 }
-
 
