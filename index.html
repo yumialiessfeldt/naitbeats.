@@ -5,20 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NaitBeats</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background: #121212;
             color: #e0e0e0;
             font-family: 'Arial', sans-serif;
         }
+        header {
+            background: #1f1f1f; /* Match the nav color */
+            padding: 15px 0; /* Add padding to the header */
+            text-align: center; /* Center the logo */
+            border-bottom: 1px solid #333; /* Add a border */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the logo horizontally */
+            align-items: center; /* Center the logo vertically */
+        }
+        .logo {
+            width: 200px; /* Adjust the width as needed */
+        }
         nav {
             background: #1f1f1f;
             padding: 15px;
             border-bottom: 1px solid #333;
             display: flex;
-            justify-content: space-between; /* Space between logo and social icons */
             align-items: center; /* Added */
+            justify-content: space-between;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-right: 20px; /* Add some space between the logo and social icons */
         }
         nav strong {
             color: #e0e0e0;
@@ -74,17 +90,13 @@
             padding: 15px;
             border-top: 1px solid #333;
         }
-        .logo {
-            width: 200px; /* Adjust the width as needed */
-        }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://i.imgur.com/uVUnh41.png" alt="NaitBeats Logo" class="logo">
+        <div class="logo-container"> <img src="https://i.imgur.com/uVUnh41.png" alt="NaitBeats Logo" class="logo"> </div>
     </header>
     <nav>
-        <img src="https://i.imgur.com/uVUnh41.png" alt="NaitBeats Logo" class="logo">
         <div class="social-icons">
             <a href="https://instagram.com/naitbeatss" target="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
