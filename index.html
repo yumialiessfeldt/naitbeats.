@@ -11,25 +11,24 @@
             background: #121212;
             color: #e0e0e0;
             font-family: 'Arial', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scrollbar */
         }
         nav {
             background: #1f1f1f;
-            padding: 15px 20px;
+            padding: 15px;
             border-bottom: 1px solid #333;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+            justify-content: center;
+            align-items: center; /* Added */
         }
         nav strong {
             color: #e0e0e0;
-            font-size: 1.5rem; /* Make the title bigger */
         }
         .social-icons {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 15px;
-            margin: 0; 
+            margin: 0; /* Removed margin */
         }
         .social-icons a {
             display: inline-flex;
@@ -77,34 +76,16 @@
         }
         /* Styling for the Logo */
         .logo {
-            display: block; 
-            margin: 20px auto; 
-            border-radius: 10px; 
-            width: 500px; 
-            height: auto; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+            display: block; /* Make it a block element for better control */
+            margin: 20px auto; /* Center the logo horizontally */
+            border-radius: 20px; /* Add rounded corners */
+            width: 1600px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
         }
         /* Styling for the Navbar */
         nav {
-            border-radius: 0 0 10px 10px;
-            padding: 15px 20px;
-        }
-        /* Section Styles */
-        section {
-            text-align: center;
-            padding: 20px;
-        }
-        h2 {
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-        h3 {
-            color: #e0e0e0;
-            margin-bottom: 10px;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+            padding: 15px 20px; /* Add some padding */
         }
     </style>
 </head>
@@ -113,7 +94,6 @@
         <img src="https://i.imgur.com/xuiJQFO.png" alt="NaitBeats Logo" class="logo">
     </header>
     <nav>
-        <strong>NaitBeats</strong>
         <div class="social-icons">
             <a href="https://instagram.com/naitbeatss" target="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
@@ -128,8 +108,10 @@
     </nav>
     <main class="container">
         <section>
-            <h2>NaitBeats</h2>
-            <h3>Hakuna Matata</h3>
+            <hgroup>
+                <h2>NaitBeats</h2>
+                <h3>Hakuna Matata</h3>
+            </hgroup>
             <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology. When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
             <h3>Professional Yet Approachable</h3>
             <p>I believe in staying professional while maintaining a positive and relaxed outlook. My work reflects this balance, aiming for excellence with a touch of creativity.</p>
