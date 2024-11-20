@@ -3,3 +3,8 @@ html {
   width: 100%;
 }
 
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(9, 30px); 
+    gap: 2px;
+}
