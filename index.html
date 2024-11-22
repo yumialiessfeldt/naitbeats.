@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NaitBeats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaitBeats - Enhanced Structure and Styling</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background: #121212;
@@ -16,13 +15,14 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        /* Navigation */
         nav {
             background: #1f1f1f;
-            padding: 15px;
+            padding: 15px 20px;
             border-bottom: 1px solid #333;
             display: flex;
-            justify-content: center;
-            align-items: center; /* Added */
+            justify-content: space-between;
+            align-items: center;
             border-radius: 0 0 10px 10px;
             position: relative;
         }
@@ -32,10 +32,9 @@
         }
         .social-icons {
             display: flex;
-            justify-content: center;
-            align-items: center;
             gap: 15px;
-            margin: 0; /* Removed margin */
+            margin: 0;
+            justify-content: center; /* Center the social icons */
         }
         .social-icons a {
             display: inline-flex;
@@ -46,14 +45,53 @@
         }
         .social-icons a img {
             width: 36px;
-            height: 30px;
+            height: 36px;
             margin-right: 8px;
         }
-      .icon-buttons {
+        /* Logo */
+        .logo {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 500px;
+            height: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Content Section */
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, #282828, #1f1f1f);
+        }
+        .content-section h2 {
+            color: #e0e0e0; /* White text */
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center; /* Center text */
+            width: 80%; /* Adjust width for better centering */
+        }
+        .content-section h3 {
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+        .content-section p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            text-align: center; /* Center the text */
+            width: 80%; /* Adjust width for better centering */
+        }
+        /* Icon Buttons */
+        .icon-buttons {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 10px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
         .icon-buttons a {
@@ -67,6 +105,7 @@
             height: 70px;
             justify-content: center;
             transition: transform 0.2s ease-in-out;
+            position: relative; /* For overlay */
         }
         .icon-buttons a img {
             width: 28px;
@@ -82,7 +121,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(89, 89, 89)); /* Yellow gradient overlay */
+            background: rgba(255, 215, 0, 0.2); /* Yellow gradient overlay */
             border-radius: 50%;
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -90,26 +129,29 @@
         .icon-buttons a:hover::before {
             opacity: 1;
         }
-    footer {
+        /* Footer */
+        footer {
             background: #1f1f1f;
             text-align: center;
             padding: 15px;
             border-top: 1px solid #333;
             margin-top: 20px;
         }
-        /* Styling for the Logo */
-        .logo {
-            display: block; /* Make it a block element for better control */
-            margin: 20px auto; /* Center the logo horizontally */
-            border-radius: 20px; /* Add rounded corners */
-            width: 1500px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-   
-        /* Styling for the Navbar */
-        nav {
-            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
-            padding: 15px 20px; /* Add some padding */
+        /* Responsive Design (Optional) */
+        @media (max-width: 768px) {
+            .logo {
+                width: 80%;
+            }
+            .content-section {
+                padding: 15px;
+            }
+            .icon-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .icon-buttons a {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -118,6 +160,7 @@
         <img src="https://i.imgur.com/xuiJQFO.png" alt="NaitBeats Logo" class="logo">
     </header>
     <nav>
+        <strong>NaitBeats</strong>
         <div class="social-icons">
             <a href="https://instagram.com/naitbeatss" target="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">Instagram
@@ -130,36 +173,33 @@
             </a>
         </div>
     </nav>
-    <main class="container">
-        <section>
-            <hgroup>
-                <h2>NaitBeats</h2>
-                <h3>Hakuna Matata</h3>
-            </hgroup>
+    <main>
+        <section class="content-section">
+            <h2>NaitBeats</h2>
+            <h3>Hakuna Matata</h3>
             <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology. When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
             <h3>Professional Yet Approachable</h3>
             <p>I believe in staying professional while maintaining a positive and relaxed outlook. My work reflects this balance, aiming for excellence with a touch of creativity.</p>
             <h3>Explore</h3>
-            <p>Use the icons below to learn more about me, connect via email, or play a not so fun Minesweeper game!</p>
+            <p>Use the icons below to learn more about me, connect via email, or play a fun Minesweeper game!</p>
         </section>
         <div class="icon-buttons">
             <a href="about.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/876/876069.png" alt="About">
-                <medium><p style="color: #ffffff;">About</p></medium>
+                <small>About</small>
             </a>
             <a href="contact.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="Mail">
-                 <medium><p style="color: #ffffff;">Contact</p></medium>
+                <small>Contact</small>
             </a>
             <a href="minigame.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/103/103086.png" alt="Controller">
-                 <medium><p style="color: #ffffff;">Game</p></medium>
+                <small>Game</small>
             </a>
         </div>
     </main>
     <footer>
         <small>© 2024 NaitBeats</small>
     </footer>
-    <script src="script.js"></script> 
 </body>
 </html>
