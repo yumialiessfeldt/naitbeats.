@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NaitBeats</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
         body {
     background: #000000;
@@ -48,21 +48,6 @@
             height: 36px;
             margin-right: 8px;
         }
-        /*Data AOS*/
-    [data-aos] {
-  opacity: 1 !important; /* Ensure text visibility */
-  transform: none !important; /* Disable unwanted transformations */
-}
-
-[data-aos].aos-animate {
-  opacity: 1; /* After animation, ensure content stays visible */
-  transform: none; /* Prevent misalignment post-animation */
-}
-
-        /* Reset text alignment */
-section, div, p, h1, h2, h3 {
-  text-align: left; /* Or center, depending on your design */
-}
         /*Social Wrapper*/
 .socials-wrapper {
     display: flex;
@@ -125,14 +110,6 @@ section, div, p, h1, h2, h3 {
             text-align: center; /* Center the text */
             width: 80%; /* Adjust width for better centering */
         }
-
-        /*Section*/
-        section {
-      min-height: 100vh; /* Each section takes full height of viewport */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
         /* Icon Buttons */
         .icon-buttons {
             display: flex;
@@ -191,18 +168,6 @@ section, div, p, h1, h2, h3 {
     </style>
 </head>
 <body>
-    
-      <section data-aos="fade-up">Welcome to My Website</section>
-  <section data-aos="zoom-in">About Me</section>
-  <section data-aos="zoom-in">My Projects</section>
-  <section data-aos="zoom-in">Contact Me</section>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init();
-  </script>
-    
     <header>
         <img src="https://i.imgur.com/XscVZDz.jpeg" alt="NaitBeats Logo" class="logo">
     </header>
@@ -223,16 +188,14 @@ section, div, p, h1, h2, h3 {
   </div>
     </nav>
     <main>
-        <section data-aos="zoom-in">
+        <section class="content-section">
             <h2>NaitBeats</h2>
             <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. <br>
                 I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology.<br>
                 When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
-            <section data-aos="zoom-in">
             <h3>Professional Yet Approachable</h3>
             <p>I believe in staying professional while maintaining a positive and relaxed outlook.<br>
                 My work reflects this balance, aiming for excellence with a touch of creativity.</p>
-                <section data-aos="zoom-in">
             <h3>Explore</h3>
             <p>Use the icons below to learn more about me, connect via email, or play a not so fun Minesweeper game!</p>
         </section>
